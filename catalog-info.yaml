@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ repo }}
+  annotations:
+    github.com/project-slug: CTS-Dummy-Org/${{ repo }}
+spec:
+  type: service
+  owner: user:guest
+  system: default/${{ name }}
+  lifecycle: experimental
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ${{ name }}
+  description: ${{ desc }}
+spec:
+  owner: user:guest
+  lifecycle: experimental
+
+---
